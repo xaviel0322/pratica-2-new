@@ -1,0 +1,60 @@
+pratica 3
+
+
+__Deberías ver un nuevo disco, por ejemplo: /dev/sdb (sin particiones).
+
+lsblk
+
+
+__Crear partición
+
+sudo fdisk /dev/sdb
+
+
+__Dentro de fdisk:
+
+--n → nueva partición
+
+--p → partición primaria
+
+--Acepta los valores por defecto (inicio/fin).
+
+--w → guardar y salir
+
+
+
+ --Formatear a ext4
+
+sudo mkfs.ext4 /dev/sda
+
+
+--Crear carpeta en el escritorio y montar el disco
+
+ls ~
+
+mkdir -p ~/Desktop/mi_disco
+
+--Ahora montas la partición:
+
+sudo mount /dev/sda ~/Desktop/mi_disco
+
+
+--Crear archivo AdrianAlcantara.txt
+
+echo "Este es el archivo de Adrian Alcantara" > ~/Desktop/mi_disco/AdrianAlcantara.txt
+
+---verifico que esta ahi
+
+ls ~/Desktop/mi_disco
+
+
+-- Desmontar unidad
+
+
+sudo umount ~/Desktop/mi_disco
+sudo mount /dev/sda /mnt
+
+--compruevo que sigue ahi
+
+ls /mnt
+cat /mnt/AdrianAlcantara.txt
