@@ -1,0 +1,24 @@
+pratica 2
+
+crontap -e
+
+
+#actualizar todas las tardes a las 11
+* 23 * * * yum update -y
+
+ which reboot
+
+
+
+/usr/sbin/reboot
+
+* 3 * * 0 /sbin/shutdown -r now
+
+
+ls /tmp
+
+ls -la /tmp
+
+at now + 1 minute
+
+rm -rf /tmp/*
