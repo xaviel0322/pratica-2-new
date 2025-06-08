@@ -1,0 +1,18 @@
+pratica 1
+
+yum upgrade && yum update
+
+dnf search
+git clone https://github.com/aristocratos/bashtop.git
+cd bashtop
+
+make install
+
+make uninstall
+
+tree
+
+rm -rf /home/xaviel/bashtop
+
+find -name bashtop
+
